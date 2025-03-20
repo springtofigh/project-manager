@@ -32,7 +32,7 @@ function SigninPage() {
     <button onClick={loginHandler}>Sign In</button>
     <div>
         <p>Create account?</p>
-        <Link href='/signup'>Login</Link>
+        <Link href='/signup'>Signup</Link>
     </div>
 </div>
   )

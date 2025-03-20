@@ -9,13 +9,17 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
+    description: {
+        type: String,
+        required: false,
+    },
     name: {
         type: String,
     },
     lastName: {
         type: String,
     },
-    todos:[{ title: String, status: String }],
+    todos:[{ title: String, status: String, description: String }],
     createdAt: {
         type: Date,
         default: () => Date.now(),

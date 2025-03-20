@@ -1,7 +1,7 @@
 import { getSession } from "next-auth/react";
-import connectDB from "../../utils/connectDB";
-import User from "../../models/User";
-import { sortTodos } from "../../utils/sortTodo";
+import connectDB from "../../../utils/connectDB";
+import User from "../../../models/User";
+import { sortTodos } from "../../../utils/sortTodo";
 
 async function handler(req, res) {
     try {
@@ -24,15 +24,16 @@ async function handler(req, res) {
 
     
     if (req.method ==='POST') {
-        const { title, status } = req.body;
-        if (!title || !status) {
+        const { title, status, description } = req.body;
+
+        if (!title || !status || !description.trim()) {
             return res.status.json({ status: 'failed' , message: 'Invalid data!' })
         }
 
-        user.todos.push({title, status });
+        user.todos.push({title, status, description });
         user.save();
 
-        res.status(201).json({ status: 'success', message: 'Todo created' });
+        return res.status(201).json({ status: 'success', message: 'Todo created' });
     } else if (req.method ==='GET') {
         const sortedData = sortTodos(user.todos);
         res.status(200).json({ status: 'success', data: { todos: sortedData } });

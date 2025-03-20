@@ -116,7 +116,7 @@ label {
   font-size: 1.3rem;
 }
 
-input {
+input, textarea {
   border: none;
   border-radius: 8px;
   margin-top: 5px;

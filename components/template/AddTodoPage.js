@@ -12,12 +12,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function AddTodoPage() {
     const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
     const [status, setStatus] = useState("todo");
 
     const addHandler = async () => {
+        if (!description.trim()) {
+            toast.error("Description is required");
+            return;
+        }
+
         const res = await fetch('/api/todos', {
             method: 'POST',
-            body: JSON.stringify({ title, status }),
+            body: JSON.stringify({ title, status, description }),
             headers:{"Content-Type": "application/json"}
         });
 
@@ -25,6 +31,7 @@ function AddTodoPage() {
         if (data.status === 'success') {
             setTitle("")
             setStatus("todo")
+            setDescription("")
             toast.success("Todo added!")
         }
     }
@@ -39,6 +46,16 @@ function AddTodoPage() {
             <div className="add-form__input--first">
                 <label htmlFor="title">Title: </label>
                 <input id="title" type="text" value={title} onChange={e => setTitle(e.target.value)} />
+            </div>
+            <div className="add-form__input--first">
+                <label htmlFor="todo-description">Description: </label>
+                <textarea
+                    onChange={e => setDescription(e.target.value)}
+                    name="description"
+                    id="todo-description"
+                    value={description} 
+                    >
+                </textarea>
             </div>
             <div className="add-form__input--second">
             <RadioButton status={status} setStatus={setStatus} value="todo" title="Todo">
