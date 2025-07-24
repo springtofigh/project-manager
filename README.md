@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Manager - Full-Stack Todo App ✅
 
-## Getting Started
+**Project Manager** is a full-stack Todo application built with **Next.js**. It features a secure authentication system, RESTful API routes, and MongoDB integration using **Mongoose**. This project focusing on real-world app development.
 
-First, run the development server:
+## 🚀 Features
+
+- 🧾 Add, edit, delete, and complete todos
+- 🔐 User authentication using **NextAuth** (Credentials)
+- 🗃️ MongoDB integration via **Mongoose**
+- 🔑 Password hashing using **bcryptjs**
+- 🔌 RESTful API routes (create, read, update, delete)
+- 📂 Folder structure optimized for scalability
+
+## 📁 Technologies
+
+- Next.js
+- React Icons
+- Mongoose
+- bcryptjs
+- NextAuth.js
+- MongoDB
+- CSS Modules
+
+## 🧠 What I Learned
+
+* Implementing authentication with NextAuth (email/password)
+* Hashing and validating passwords securely with bcryptjs
+* Creating RESTful API routes with error handling
+* Structuring a full-stack project using Next.js and MongoDB
+
+
+## 🔗 Live Demo
+
+👉 [Your Live Demo Link](https://your-deployment-url.com)
+
+
+## 📦 Installation
 
 ```bash
+git clone https://github.com/springtofigh/project-manager
+cd bototodo
+npm install
 npm run dev
-# or
-yarn dev
+````
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file based on the following:
+
+```env
+MONGODB_URI=your-mongodb-uri
+MONGO_USER=your-mongodb-username
+MONGO_PASS=your-mongodb-password
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧬 Mongoose Models
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+* **User Model**: Contains fields for `name`, `email`, `password`,`description`, and `Todos` contains `title`, `status`, `userId`, and timestamps
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+* Models are defined in `/models` and connected via a custom `/lib/dbConnect.js`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
