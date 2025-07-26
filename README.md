@@ -21,6 +21,10 @@
 - MongoDB
 - CSS Modules
 
+## 📸 Screenshots
+
+<img width="398" height="546" alt="Todo Capture 018 -  -  localhost" src="https://github.com/user-attachments/assets/ee1c09b7-7430-4909-9669-9e995ba0e69b" />
+
 ## 🧠 What I Learned
 
 * Implementing authentication with NextAuth (email/password)
@@ -57,5 +61,5 @@ MONGO_PASS=your-mongodb-password
 
 * **User Model**: Contains fields for `name`, `email`, `password`,`description`, and `Todos` contains `title`, `status`, `userId`, and timestamps
 
-* Models are defined in `/models` and connected via a custom `/lib/dbConnect.js`
+* Models are defined in `/models` and connected via a custom `/utils/dbConnect.js`
 
