@@ -34,13 +34,20 @@ function SingleTodo() {
     return <div>Loading...</div>; // نمایش پیام در حال بارگذاری
   }
 
+  const statusMap = {
+  todo: { label: "To Do 📝", class: "todo" },
+  pending: { label: "inProgress ⏳", class: "pending" },
+  review: { label: "In Review 🔍", class: "review" },
+  done: { label: "Done ✅", class: "done" },
+};
+
   return (
-    <div>
-      <div>
-        <h2>Title: {todo.title}</h2>
-        <p>Status: {todo.status}</p>
-        <p>Description: {todo.description}</p>
-      </div>
+    <div className="card">
+      <h2 className="title">{todo.title}</h2>
+      <p className={`status ${statusMap[todo.status]?.class || ""}`}>
+        Status: {statusMap[todo.status]?.label || "Unknown"}
+      </p>
+      <p className="description">{todo.description}</p>
     </div>
   );
 }

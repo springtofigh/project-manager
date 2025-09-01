@@ -68,41 +68,41 @@ function TodoPage() {
   if (error) return <p>{error}</p>;
 
   return (
-      <div>
-          <h1>Edit Todo</h1>
-          <form onSubmit={handleSubmit}>
-              <div>
-                  <label>Title:</label>
-                  <input
-                      type="text"
-                      value={title}
-                      onChange={(e) => setTitle(e.target.value)}
-                      required
-                  />
-              </div>
-              <div>
-                  <label>Status:</label>
-                  <select
-                      value={status}
-                      onChange={(e) => setStatus(e.target.value)}
-                      required
-                  >
-                      <option value="todo">Todo</option>
-                      <option value="in-progress">In Progress</option>
-                      <option value="done">Done</option>
-                  </select>
-              </div>
-              <div>
-                  <label>Description:</label>
-                  <textarea
-                      value={description}
-                      onChange={(e) => setDescription(e.target.value)}
-                      required
-                  />
-              </div>
-              <button type="submit">Update Todo</button>
-          </form>
-      </div>
+     <div className="todo-page">
+      <h1 className="page-title">Edit Todo</h1>
+      <form className="todo-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label>Title:</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Status:</label>
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            required
+          >
+            <option value="todo">Todo</option>
+            <option value="in-progress">In Progress</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Description:</label>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className="submit-btn">Update Todo</button>
+      </form>
+    </div>
   );
 }
 
