@@ -36,7 +36,7 @@ function SingleTodo() {
 
   const statusMap = {
   todo: { label: "To Do 📝", class: "todo" },
-  pending: { label: "inProgress ⏳", class: "pending" },
+  inProgress: { label: "in Progress ⏳", class: "pending" },
   review: { label: "In Review 🔍", class: "review" },
   done: { label: "Done ✅", class: "done" },
 };
