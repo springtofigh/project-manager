@@ -116,7 +116,8 @@ label {
   font-size: 1.3rem;
 }
 
-input, textarea {
+input,
+textarea {
   border: none;
   border-radius: 8px;
   margin-top: 5px;
@@ -366,7 +367,7 @@ button {
   padding: 1.5rem 2rem;
   border-radius: 16px;
   background: #fff;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -388,6 +389,11 @@ button {
   padding: 0.4rem 0.8rem;
   border-radius: 8px;
   display: inline-block;
+}
+
+.todo {
+  background: #ebf5fb;
+  color: #2980b9;
 }
 
 .done {
@@ -434,12 +440,13 @@ button {
 
 /* Page container */
 .todo-page {
+  width: 90%;
   max-width: 700px;
   margin: 2rem auto;
   padding: 2rem;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .page-title {
@@ -455,6 +462,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  width: 100%;
 }
 
 .form-group {
@@ -469,15 +477,22 @@ label {
   color: #34495e;
 }
 
-input, select, textarea {
+.todo-form input,
+.todo-form textarea,
+.todo-form select {
   padding: 0.7rem 1rem;
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
   border: 1px solid #dcdcdc;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.2s ease;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border-color: #3498db;
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
@@ -486,11 +501,13 @@ input:focus, select:focus, textarea:focus {
 /* Textarea */
 textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 120px;
 }
 
 /* Submit button */
 .submit-btn {
+  justify-content: center; /* وسط افقی */
+  align-items: center;
   padding: 0.8rem 1.2rem;
   background: #3498db;
   color: #fff;
@@ -511,7 +528,8 @@ textarea {
 }
 
 /* Loading & Error messages */
-.loading, .error {
+.loading,
+.error {
   text-align: center;
   margin-top: 2rem;
   font-size: 1.2rem;
