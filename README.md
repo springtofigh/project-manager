@@ -23,12 +23,16 @@
 
 ## 📸 Screenshots
 
+> ![Login Page]
 <img width="398" height="546" alt="Todo Capture 018 -  -  localhost" src="https://github.com/user-attachments/assets/ee1c09b7-7430-4909-9669-9e995ba0e69b" />
 
+> ![All Todos Page]
 <img width="1920" height="1070" alt="Fullstack Todo Capture 01 -  -  Todos" src="https://github.com/user-attachments/assets/9528e4fd-9b80-4937-81b0-f63752765a35" />
 
+> ![Edite Todo Page]
 <img width="1920" height="952" alt="Fullstack Todo Capture 02 -  -  Edite Todo" src="https://github.com/user-attachments/assets/82c61695-4b53-4341-94d5-04fdcbc1f0ef" />
 
+> ![Todo Details Page]
 <img width="1920" height="776" alt="Fullstack Todo Capture 03 -  -  Details Todo" src="https://github.com/user-attachments/assets/4219ff89-d260-4e89-ac5c-b0cb7ef64892" />
 
 
